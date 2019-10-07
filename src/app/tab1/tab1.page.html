@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Capture it</ion-title>
+  </ion-toolbar>
+ </ion-header>
+
+<ion-content>   
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="6" *ngFor="let photo of photoService.photos">
+      <img [src]="photo.data" />
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+<ion-fab-button (click)="photoService.takePicture()">
+  <ion-icon name="camera"></ion-icon>
+</ion-fab-button>
+</ion-fab>
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <!--  <ion-button (click)="takeSnap()" expand="full" color="dark">
+      Take Snap
+    </ion-button>
+    <ion-list *ngFor="let photo of photos">
+      <ion-item>
+        <img src={{photo}} style="width:200px;height:150px;"/>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button (click)="startrecording()">Start<ion-icon name="videocam"></ion-icon> </button>
+  </ion-toolbar>-->
+
+
+</ion-content>
